@@ -1,0 +1,47 @@
+sudo docker build -t anastasiia_cloud:v1 .
+sudo docker run --name anastasiia-cloud-app -p 5000:5000 anastasiia_cloud:v1
+sudo docker tag anastasiia_cloud:v1 anastasykhab/anastasiia_cloud:v1
+sudo docker push anastasykhab/anastasiia_cloud:v1
+
+sudo docker ps -a
+sudo docker rm
+sudo docker images
+sudo docker rmi
+
+
+minikube addons list
+minikube addons enable metrics-server
+
+kubectl create -f kube_deployment.yaml 
+kubectl create -f kube_service.yaml 
+kubectl create -f kube_autoscaling.yaml
+kubectl get hpa
+
+minikube service ana-node-service --url
+
+kubectl delete $(kubectl get all  | grep ana-node | awk '{print $1}')
+
+kubectl describe pod ana-node-liveness-exec
+kubectl get pod ana-node-liveness-exec
+
+
+https://github.com/kubernetes-sigs/kubespray/issues/3006
+$ git clone https://github.com/kubernetes-incubator/metrics-server.git
+$ cd metrics-server
+$ kubectl create -f deploy/1.8+/
+
+https://github.com/kubernetes-incubator/kube-aws/issues/549
+You need to specify resource requests in the Pod spec section of your deployment for the HPA to be able to display that information (and take any action whatsoever based on it).
+
+https://intoli.com/blog/exit-on-errors-in-bash-scripts/
+
+https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/
+
+targetCPUUtilizationPercentage: 50
+
+
+https://stackoverflow.com/questions/53407841/kubernetes-autoscaling-with-memory-not-working-but-working-for-cpu
+
+*** Worked like a charm!!!!!! 
+https://koudingspawn.de/kubernetes-autoscaling/
+***
