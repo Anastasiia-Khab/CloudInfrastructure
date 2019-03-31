@@ -6,10 +6,10 @@
 - load_service.py
 - Instruction:
 	
-	 TOWRITE: adress..../?n=100
+	 TOWRITE: `adress..../?n=100`
 	  (or any other integer number. My service will sort n random integer numbers [-100,100])
 	 
-	 TOWRITE: adress..../livetest
+	 TOWRITE: `adress..../livetest`
 	  (to check if service is live)
 	  should return: TEST OK
 
@@ -23,7 +23,7 @@
         
 	(it uses kube_deployment.yaml;kube_service.yaml;kube_autoscaling.yaml)
 	
-	TOWRITE: sh script.sh
+	TOWRITE: `sh script.sh`
 
 #### 4. Kubernetes Readiness check + Liveness check.
         
@@ -34,7 +34,7 @@
 - script_five.sh
 	(it uses kube_deployment_five.yaml;kube_service.yaml;kube_autoscaling.yaml)
 	
-	TOWRITE: sh script_five.sh
+	TOWRITE: `sh script_five.sh`
 
 #### 7. Реалізувати Memory scaling (імітувати задачу, що потребує багато пам'яті і вирішити проблему масштабування у випадку досягнення критичного розміру по використанню пам'яті):
 - kube_autoscaling.yaml
