@@ -39,8 +39,9 @@
 #### 7. Реалізувати Memory scaling (імітувати задачу, що потребує багато пам'яті і вирішити проблему масштабування у випадку досягнення критичного розміру по використанню пам'яті):
 - kube_autoscaling.yaml
 - folder metrics-server
-- CPU scalin is also implemented:     
+- CPU scalin is also implemented     
 	`replicas: 2`
+	
 	`minReplicas: 1`
 	`maxReplicas: 4`
 	`CPU: targetAverageUtilization: 60`
