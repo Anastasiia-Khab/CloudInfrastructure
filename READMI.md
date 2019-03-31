@@ -27,9 +27,8 @@
 
 #### 4. Kubernetes Readiness check + Liveness check.
         
-	the ones (livenessProbe and readinessProbe) written in kube_deployment.yaml are used
-        
-	also firstly I used  kube_liveness_dontneedthismore.yaml; kube_readiness_dontneedthisanymore.yaml firstly
+- the ones (livenessProbe and readinessProbe) written in kube_deployment.yaml are used
+- also firstly I used  kube_liveness_dontneedthismore.yaml; kube_readiness_dontneedthisanymore.yaml firstly
 
 #### 5. Bash скрипт для локального деплою в minikube (без хмарного реєстру контейнерів):
 - script_five.sh
@@ -43,25 +42,20 @@
 - CPU scalin is also implemented
         
         
-	replicas: 2
-	
-	minReplicas: 1
-	
-	maxReplicas: 4
-
-
-	CPU: targetAverageUtilization: 60
-	
-	memory: targetAverageUtilization: 60
+	`replicas: 2`
+	`minReplicas: 1`
+	`maxReplicas: 4`
+	`CPU: targetAverageUtilization: 60`
+	`memory: targetAverageUtilization: 60`
 
 Скріпти написані таким чином що вони завершують роботу коли щось не виконується і виводять текст помилки.
 Також sh script_five.sh напочатку видаляє всі запущені мною одиниці на kubectl
 
-!!!!!!! У файлі cheater .txt можна прочитати більшість корисних лінків та команд які використовувала в ході виконання даного домашнього:)
+###### !!! У файлі cheater .txt можна прочитати більшість корисних лінків та команд які використовувала в ході виконання даного домашнього:)
 
-!!!!!!! Правильність виконання можна також перевірити переглянувши скріни у папці images:)
+###### !!! Правильність виконання можна також перевірити переглянувши скріни у папці images:)
 
-На гітхабі не має папки metrics-server , вона є в архіві. Також можна її скачати самостійно:
+###### !!! На гітхабі не має папки metrics-server , вона є в архіві. Також можна її скачати самостійно:
 	`$ git clone https://github.com/kubernetes-incubator/metrics-server.git`
 	`$ cd metrics-server`
 	`$ kubectl create -f deploy/1.8+`
