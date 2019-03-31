@@ -15,17 +15,13 @@
 	  (to check if service is live)
 	  should return: TEST OK
 
-#### 2. Скрипти YAML для завантаження в Kubernetes
-	
-	kube_deployment.yaml
-        
-	kube_service.yaml
-        
-	kube_autoscaling.yaml
+#### 2. Скрипти YAML для завантаження в Kubernetes:
+	- kube_deployment.yaml 
+	- kube_service.yaml
+	- kube_autoscaling.yaml
 
-#### 3. Bash скрипт, який інсталює сервіс в MiniKube автоматично
-        
-	script.sh
+#### 3. Bash скрипт, який інсталює сервіс в MiniKube автоматично:
+	- script.sh
         
 	(it uses kube_deployment.yaml;kube_service.yaml;kube_autoscaling.yaml)
 	
@@ -37,20 +33,15 @@
         
 	also firstly I used  kube_liveness_dontneedthismore.yaml; kube_readiness_dontneedthisanymore.yaml firstly
 
-#### 5. Bash скрипт для локального деплою в minikube (без хмарного реєстру контейнерів)
-        
-	script_five.sh
-        
+#### 5. Bash скрипт для локального деплою в minikube (без хмарного реєстру контейнерів):
+	- script_five.sh
 	(it uses kube_deployment_five.yaml;kube_service.yaml;kube_autoscaling.yaml)
 	
 	TOWRITE: sh script_five.sh
 
-#### 7. Реалізувати Memory scaling (імітувати задачу, що потребує багато пам'яті і вирішити проблему масштабування у випадку досягнення критичного розміру по використанню пам'яті)
-	
+#### 7. Реалізувати Memory scaling (імітувати задачу, що потребує багато пам'яті і вирішити проблему масштабування у випадку досягнення критичного розміру по використанню пам'яті):
 	- kube_autoscaling.yaml
-        
 	- folder metrics-server
-	
 	- CPU scalin is also implemented
         
         
@@ -73,8 +64,6 @@
 !!!!!!! Правильність виконання можна також перевірити переглянувши скріни у папці images:)
 
 На гітхабі не має папки metrics-server , вона є в архіві. Також можна її скачати самостійно:
-`
-	$ git clone https://github.com/kubernetes-incubator/metrics-server.git
-	$ cd metrics-server
-	$ kubectl create -f deploy/1.8+/
-`
+	`$ git clone https://github.com/kubernetes-incubator/metrics-server.git`
+	`$ cd metrics-server`
+	`$ kubectl create -f deploy/1.8+`
