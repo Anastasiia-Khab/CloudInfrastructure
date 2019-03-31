@@ -73,7 +73,8 @@
 !!!!!!! Правильність виконання можна також перевірити переглянувши скріни у папці images:)
 
 На гітхабі не має папки metrics-server , вона є в архіві. Також можна її скачати самостійно:
-
+''''
 	$ git clone https://github.com/kubernetes-incubator/metrics-server.git
 	$ cd metrics-server
 	$ kubectl create -f deploy/1.8+/
+	'''
