@@ -41,7 +41,6 @@
 - folder metrics-server
 - CPU scalin is also implemented     
 	`replicas: 2`
-	
 	`minReplicas: 1`
 	`maxReplicas: 4`
 	`CPU: targetAverageUtilization: 60`
