@@ -47,11 +47,11 @@
 
 #### 7. Реалізувати Memory scaling (імітувати задачу, що потребує багато пам'яті і вирішити проблему масштабування у випадку досягнення критичного розміру по використанню пам'яті)
 	
-	kube_autoscaling.yaml
+	- kube_autoscaling.yaml
         
-	folder metrics-server
+	- folder metrics-server
 	
-	CPU scalin is also implemented
+	- CPU scalin is also implemented
         
         
 	replicas: 2
@@ -73,8 +73,8 @@
 !!!!!!! Правильність виконання можна також перевірити переглянувши скріни у папці images:)
 
 На гітхабі не має папки metrics-server , вона є в архіві. Також можна її скачати самостійно:
-''''
+`
 	$ git clone https://github.com/kubernetes-incubator/metrics-server.git
 	$ cd metrics-server
 	$ kubectl create -f deploy/1.8+/
-	'''
+`
